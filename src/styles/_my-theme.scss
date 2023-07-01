@@ -1,0 +1,28 @@
+// @import '~@angular/material/theming';
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+$nga-primary: mat.define-palette(mat.$cyan-palette);
+$nga-accent:  mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$nga-warn:    mat.define-palette(mat.$red-palette);
+
+$nga-typography: mat.define-typography-config();
+// $nga-theme:   mat-light-theme($nga-primary, $nga-accent, $nga-warn);
+$nga-theme:   mat.define-light-theme((
+    color: (
+        primary: $nga-primary,
+        accent: $nga-accent,
+        warn: $nga-warn,
+    ),
+    typography: $nga-typography,
+    density: 0,
+));
+
+$color-config:    mat.get-color-config($nga-theme);
+$nga-background: map.get($color-config, background);
+$nga-foreground:  map.get($color-config, foreground);
+
+// $nga-background: map-get($nga-theme, background);
+// $nga-foreground: map-get($nga-theme, foreground);
+
+

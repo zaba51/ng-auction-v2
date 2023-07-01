@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+@use './_my-theme' as mytheme;
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:600');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+// @include mat-core();
+@include mat.core();
+
+@include mat.core-theme(mytheme.$nga-theme);
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  color: #212121;
+  background-color: #f3f3f3;
+  font-family: mat.font-family(mytheme.$nga-typography);
+  line-height: mat.line-height(mytheme.$nga-typography, 'body-1');
+  font-size: mat.font-size(mytheme.$nga-typography, 'body-1');
+  height: 100%;
+  margin: 0;
+}
