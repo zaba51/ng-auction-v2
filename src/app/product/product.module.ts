@@ -6,6 +6,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductSuggestionComponent } from './product-suggestion/product-suggestion.component';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     RouterModule.forChild([
       { path: '', component: ProductComponent }
     ]),
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule
   ]
 })
 export class ProductModule { }

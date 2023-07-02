@@ -10,6 +10,8 @@
 
 @include mat.core-theme(mytheme.$nga-theme);
 
+@include mat.all-component-themes(mytheme.$nga-theme);
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

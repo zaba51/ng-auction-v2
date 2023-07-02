@@ -1,0 +1,38 @@
+@use 'styles/my-theme' as theme;
+@use '@angular/material' as mat;
+
+:host {
+    display: block;
+}
+
+  
+.tile {
+    background-color: mat.get-color-from-palette(theme.$nga-background, card);
+
+    &:hover {
+        @include mat.elevation(4);
+        transition: .3s;
+    }
+}
+
+.tile__content {
+    display:block;
+    height: 100%;
+    width: 100%;
+}
+
+.tile__thumbnail {
+    background: no-repeat 75% 75%;
+    background-size: contain;
+    height: 75%;
+    width: 75%;
+}
+
+.info__title {
+    color: mat.get-color-from-palette(theme.$nga-foreground, text);
+    font-family: 'Abril Fatface', cursive;
+    font-size: mat.font-size(theme.$nga-typography, 'headline-6');
+    font-weight: mat.font-weight(theme.$nga-typography, 'headline-6');
+    line-height: mat.line-height(theme.$nga-typography, 'headline-6');
+    margin: 0 0 24px;
+}
