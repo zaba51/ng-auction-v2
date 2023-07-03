@@ -8,13 +8,13 @@
     </div>
     <div fxFlex="50%">
         <div class="info">
-            <h1 class="info__title">{{ product?.title }}</h1>
-            <div class="info__description">{{ product?.description }}</div>
+            <h1 class="info__title">{{ product.title }}</h1>
+            <div class="info__description">{{ product.description }}</div>
             <div class="info__bid">
                 <span>
                     <span class="info__bid-value"
                         ngClass.lt-md="info__bid-value--lt-md"
-                    >{{product?.price | currency:'USD' : 'symbol' : '.0'}}</span>
+                    >{{product.price | currency:'USD' : 'symbol' : '.0'}}</span>
                 </span>
                 <span class="info__bid-value-decimal"
                     ngClass.lt-md="info__bid-value-decimal--lt-md"

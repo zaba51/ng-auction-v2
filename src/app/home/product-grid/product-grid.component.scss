@@ -5,10 +5,6 @@
     display: block;
 }
 
-.grid-list-container {
-    margin: 16px;
-}
-  
 .tile {
     background-color: mat.get-color-from-palette(theme.$nga-background, card);
 
