@@ -3,12 +3,12 @@
 <form class="form" [formGroup]="searchForm" (ngSubmit)="onSearch()">
   <mat-form-field class="form__field">
     <input matInput type="text" placeholder="Nazwa" formControlName="title">
-    <mat-error>Title is too short.</mat-error>
+    <mat-error>Nazwa jest za krótka</mat-error>
   </mat-form-field>
 
   <mat-form-field class="form__field">
     <input matInput type="number" placeholder="Cena minimalna" formControlName="minPrice">
-    <mat-error>Cannot be less than 0.</mat-error>
+    <mat-error>Nie może byc mniejsze niż 0</mat-error>
   </mat-form-field>
 
   <mat-form-field class="form__field">
